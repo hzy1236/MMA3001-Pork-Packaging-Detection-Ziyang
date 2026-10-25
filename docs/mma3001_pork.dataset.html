@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module mma3001_pork.dataset</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="mma3001_pork.html" class="white">mma3001_pork</a>.dataset</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/dataset.py">/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/dataset.py</a></td></tr></table>
+    <p><span class="code">Prepare&nbsp;YOLO&nbsp;dataset&nbsp;paths&nbsp;and&nbsp;audit&nbsp;label-class&nbsp;imbalance.<br>
+&nbsp;<br>
+Only&nbsp;local,&nbsp;student-authorised&nbsp;datasets&nbsp;are&nbsp;accepted.&nbsp;This&nbsp;module&nbsp;does&nbsp;not<br>
+acquire&nbsp;or&nbsp;relicense&nbsp;third-party&nbsp;images,&nbsp;and&nbsp;does&nbsp;not&nbsp;assign&nbsp;new&nbsp;ground&nbsp;truth.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="argparse.html">argparse</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="yaml.html">yaml</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-count_annotations"><strong>count_annotations</strong></a>(dataset_root: pathlib._local.Path, n_classes: int) -&gt; dict[str, dict[int, int]]</dt><dd><span class="code">Count&nbsp;bounding-box&nbsp;instances&nbsp;per&nbsp;class,&nbsp;including&nbsp;absent&nbsp;classes&nbsp;as&nbsp;zero.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataset_root:&nbsp;Extracted&nbsp;Roboflow&nbsp;dataset&nbsp;root.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;n_classes:&nbsp;Number&nbsp;of&nbsp;declared&nbsp;class&nbsp;IDs.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Counts&nbsp;indexed&nbsp;by&nbsp;split&nbsp;and&nbsp;integer&nbsp;class&nbsp;ID.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Malformed&nbsp;class&nbsp;ID&nbsp;or&nbsp;bounding-box&nbsp;annotation&nbsp;line.</span></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>() -&gt; None</dt><dd><span class="code">Generate&nbsp;absolute-path&nbsp;config&nbsp;and&nbsp;report&nbsp;class&nbsp;imbalance&nbsp;to&nbsp;stdout.</span></dd></dl>
+ <dl><dt><a name="-make_config"><strong>make_config</strong></a>(dataset_root: pathlib._local.Path, output: pathlib._local.Path) -&gt; pathlib._local.Path</dt><dd><span class="code">Create&nbsp;a&nbsp;YOLO&nbsp;YAML&nbsp;whose&nbsp;image-split&nbsp;paths&nbsp;are&nbsp;unambiguous&nbsp;and&nbsp;absolute.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataset_root:&nbsp;Extracted&nbsp;Roboflow&nbsp;dataset&nbsp;root.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;output:&nbsp;Path&nbsp;for&nbsp;generated&nbsp;YAML&nbsp;configuration.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;created&nbsp;config&nbsp;file's&nbsp;resolved&nbsp;path.</span></dd></dl>
+ <dl><dt><a name="-read_class_names"><strong>read_class_names</strong></a>(dataset_root: pathlib._local.Path) -&gt; list[str]</dt><dd><span class="code">Return&nbsp;YOLO&nbsp;class&nbsp;names&nbsp;from&nbsp;a&nbsp;dataset's&nbsp;``data.yaml``.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataset_root:&nbsp;Directory&nbsp;containing&nbsp;the&nbsp;original&nbsp;``data.yaml``.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Ordered&nbsp;list&nbsp;of&nbsp;label&nbsp;names&nbsp;for&nbsp;class&nbsp;IDs&nbsp;0..N-1.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;FileNotFoundError:&nbsp;The&nbsp;expected&nbsp;YAML&nbsp;does&nbsp;not&nbsp;exist.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Class&nbsp;names&nbsp;are&nbsp;missing&nbsp;or&nbsp;class&nbsp;IDs&nbsp;are&nbsp;not&nbsp;consecutive.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>SPLITS</strong> = {'test': 'test', 'train': 'train', 'val': 'valid'}</td></tr></table>
+</body></html>

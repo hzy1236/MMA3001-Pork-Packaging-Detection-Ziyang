@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module mma3001_pork.experiment</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="mma3001_pork.html" class="white">mma3001_pork</a>.experiment</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/experiment.py">/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/experiment.py</a></td></tr></table>
+    <p><span class="code">Reproduce&nbsp;YOLOv8n&nbsp;training&nbsp;used&nbsp;for&nbsp;the&nbsp;two-resolution&nbsp;comparison.<br>
+&nbsp;<br>
+The&nbsp;student's&nbsp;original&nbsp;executed&nbsp;evidence&nbsp;is&nbsp;their&nbsp;Colab&nbsp;notebook/logs.&nbsp;This<br>
+module&nbsp;packages&nbsp;the&nbsp;same&nbsp;documented&nbsp;configuration&nbsp;for&nbsp;reproducibility.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="argparse.html">argparse</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-main"><strong>main</strong></a>() -&gt; None</dt><dd><span class="code">Fine-tune&nbsp;a&nbsp;pretrained&nbsp;YOLOv8n&nbsp;model&nbsp;on&nbsp;the&nbsp;selected&nbsp;dataset.</span></dd></dl>
+ <dl><dt><a name="-training_arguments"><strong>training_arguments</strong></a>(
+    variant: str,
+    data: pathlib._local.Path,
+    runs: pathlib._local.Path
+) -&gt; dict</dt><dd><span class="code">Return&nbsp;documented&nbsp;training&nbsp;options,&nbsp;changing&nbsp;only&nbsp;input&nbsp;image&nbsp;size.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;variant:&nbsp;One&nbsp;of&nbsp;``baseline``&nbsp;and&nbsp;``highres``.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;Absolute-path&nbsp;YOLO&nbsp;dataset&nbsp;YAML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;runs:&nbsp;Output&nbsp;directory&nbsp;for&nbsp;weights,&nbsp;losses&nbsp;and&nbsp;plots.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&nbsp;accepted&nbsp;by&nbsp;``ultralytics.YOLO.train``.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>CONFIGS</strong> = {'baseline': {'imgsz': 416, 'name': 'yolov8n_baseline'}, 'highres': {'imgsz': 640, 'name': 'yolov8n_640'}}</td></tr></table>
+</body></html>

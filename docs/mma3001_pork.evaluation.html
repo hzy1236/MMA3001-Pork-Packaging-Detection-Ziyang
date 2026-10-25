@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module mma3001_pork.evaluation</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title"><a href="mma3001_pork.html" class="white">mma3001_pork</a>.evaluation</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/evaluation.py">/mnt/data/MMA3001_Pork_Packaging_GitHub_Kit/mma3001_pork/evaluation.py</a></td></tr></table>
+    <p><span class="code">Evaluate&nbsp;a&nbsp;trained&nbsp;detector&nbsp;on&nbsp;validation&nbsp;or&nbsp;held-out&nbsp;test&nbsp;images.<br>
+&nbsp;<br>
+Test&nbsp;data&nbsp;must&nbsp;not&nbsp;be&nbsp;used&nbsp;to&nbsp;tune&nbsp;hyperparameters.&nbsp;The&nbsp;resulting&nbsp;P/R/AP<br>
+metrics&nbsp;describe&nbsp;object&nbsp;detection,&nbsp;*not*&nbsp;image-level&nbsp;classification&nbsp;accuracy.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="argparse.html">argparse</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-extract_metrics"><strong>extract_metrics</strong></a>(box_metrics: object) -&gt; dict[str, float]</dt><dd><span class="code">Convert&nbsp;Ultralytics&nbsp;detection&nbsp;box&nbsp;metrics&nbsp;to&nbsp;serialisable&nbsp;floats.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;box_metrics:&nbsp;``model.val(...).box``&nbsp;object&nbsp;with&nbsp;``mp``,&nbsp;``mr``,&nbsp;``map50``,&nbsp;``map``.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Mean&nbsp;precision,&nbsp;recall,&nbsp;mAP&nbsp;at&nbsp;IoU&nbsp;.5,&nbsp;mAP&nbsp;across&nbsp;IoU&nbsp;.5–.95.</span></dd></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>() -&gt; None</dt><dd><span class="code">Load&nbsp;saved&nbsp;weights,&nbsp;compute&nbsp;requested&nbsp;split's&nbsp;metrics&nbsp;and&nbsp;write&nbsp;JSON.</span></dd></dl>
+</td></tr></table>
+</body></html>
