@@ -1,0 +1,6 @@
+class,images,instances,precision,recall,mAP50,mAP50_95
+all,80,79,0.5063,0.4136,0.3553,0.1969
+loose-meat,2,3,0.237,0.237,0.142,0.0983
+packaging-error,16,23,0.237,0.478,0.28,0.0688
+twisted-meat,4,4,1.0,0.0,0.113,0.0287
+unsealed,49,49,0.551,0.939,0.886,0.592

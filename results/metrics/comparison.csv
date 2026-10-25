@@ -1,0 +1,4 @@
+experiment,split,image_size_px,epochs,precision,recall,mAP50,mAP50_95,training_minutes,notes
+baseline_416,validation,416,12,0.463,0.386,0.45,0.288,7.2,best.pt metrics rounded from final validation output
+improved_640,validation,640,12,0.659,0.486,0.478,0.261,10.0,best.pt metrics rounded from final validation output
+improved_640,test,640,12,0.5063,0.4136,0.3553,0.1969,,One held-out test evaluation of chosen improved model
